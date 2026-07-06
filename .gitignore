@@ -1,0 +1,24 @@
+# Sistema / caches
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Datos pesados (crudos y procesados) — no se versionan
+data/
+
+# Resultados: se versionan solo tablas y figuras (referenciadas por el README)
+results/*
+!results/tables/
+!results/tables/*.csv
+!results/figures/
+!results/figures/*.png
+results/.matplotlib/
+
+# Artefactos binarios pesados sueltos
+*.zip
+*.mp3
+*.wav
+*.pkl
+*.npy
