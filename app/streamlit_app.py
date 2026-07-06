@@ -39,6 +39,12 @@ st.markdown(
         padding: 0.75rem 0.9rem;
         background: #fff;
     }
+    /* Forzar texto oscuro en las métricas: el fondo es blanco fijo, así que en
+       tema oscuro el texto claro quedaría invisible (blanco sobre blanco). */
+    [data-testid="stMetricValue"] { color: var(--ink) !important; }
+    [data-testid="stMetricLabel"],
+    [data-testid="stMetricLabel"] * { color: var(--muted) !important; }
+    [data-testid="stMetricDelta"] { color: var(--muted) !important; }
     div[data-testid="stVerticalBlockBorderWrapper"] {
         border-color: var(--border);
         border-radius: 8px;
