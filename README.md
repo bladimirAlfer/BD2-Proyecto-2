@@ -208,6 +208,48 @@ Sobre los histogramas BoVW/BoAW se implementan **dos variantes de KNN**:
 
 ---
 
+
+## Video demo
+
+▶️ **[Ver video demo del sistema](https://drive.google.com/file/d/1a9CDJFR0xlorhjtD8GFxF_pg0wZXMO21/view?usp=sharing)**
+
+El video demo muestra el funcionamiento completo del sistema de recuperación multimodal. En la demostración se observa la ejecución de la interfaz, el uso de los módulos de búsqueda por texto, búsqueda por imagen, búsqueda por audio y consultas combinadas entre distintas modalidades.
+
+
+## Demo visual del sistema
+
+A continuación se presentan capturas del sistema implementado, mostrando los principales módulos desarrollados para la recuperación de información multimodal.
+
+### Búsqueda por audio
+
+Este módulo permite realizar consultas sobre canciones usando descriptores locales de audio, principalmente MFCC, con el objetivo de recuperar resultados similares según sus características acústicas.
+
+![Búsqueda por audio](results/Audio_bd2.png)
+
+---
+
+### Búsqueda combinada audio + texto
+
+Este módulo integra información acústica con información textual, permitiendo una búsqueda musical más completa. Se combinan características extraídas del audio con metadatos o texto asociado a las canciones.
+
+![Búsqueda audio y texto](results/audio_text_bd2.png)
+
+---
+
+### Búsqueda en documentos por texto
+
+Este módulo permite realizar recuperación textual sobre documentos procesados en chunks. Para ello se utiliza TF-IDF como representación textual, permitiendo encontrar fragmentos relevantes dentro del corpus documental.
+
+![Búsqueda documental por texto](results/documento_texto_bd2.png)
+
+---
+
+###  Búsqueda en documentos por imagen
+
+Este módulo permite realizar recuperación visual sobre imágenes extraídas de documentos. Se utilizan descriptores locales SIFT para representar las imágenes y comparar similitud visual entre la consulta y el corpus.
+
+![Búsqueda documental por imagen](results/documento_imagen_bd2.png)
+
 ## 7. Resultados experimentales
 
 Marco: [`src/evaluation/benchmark_scaling.py`](src/evaluation/benchmark_scaling.py)
