@@ -11,7 +11,6 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 X = np.load(INPUT)
 
-# Si tienes demasiados descriptores, muestrea.
 MAX_DESC = int(os.getenv("PMC_MAX_VISUAL_DESCRIPTORS", "200000"))
 if X.shape[0] > MAX_DESC:
     idx = np.random.default_rng(42).choice(X.shape[0], MAX_DESC, replace=False)
